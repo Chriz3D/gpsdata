@@ -1,0 +1,27 @@
+<div class="container">
+<h1> Add new track </h1>
+<% if !@track.errors.empty? %>
+   <div>
+      
+      <ul>
+         <% @track.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+      
+   </div>
+<% end %>
+
+<div>
+   <%= form_for @track, html: { multipart: true } do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true %>
+      <br><br>
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment, required: true %>
+      <br>
+      <%= f.submit "Save" %>
+   <% end %>
+        
+</div>
+</div>
