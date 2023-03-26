@@ -18,7 +18,7 @@
       <%= f.text_field :name, required: true %>
       <br><br>
       <%= f.label :attachment %>
-      <%= f.file_field :attachment, required: true %>
+      <%= f.file_field :attachment, required: true, accept: ".gpx"  %>
       <br>
       <%= f.submit "Save" %>
    <% end %>
