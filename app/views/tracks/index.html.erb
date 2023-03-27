@@ -17,7 +17,7 @@
    <thead>
       <tr>
          <th>Track</th>
-         <th>Updated</th>
+         <th>Starttime</th>
          <th>Download Link</th>
          <th>Action</th>
       </tr>
@@ -28,7 +28,7 @@
          
          <tr>
             <td><%= track.name %></td>
-            <td><%= track.updated_at %></td>
+            <td><%= track.parseGpx() %></td>
             <td><%= link_to "Download", track.attachment_url, download: ''%> </td> 
            <td><%= button_to "Delete",  track, method: :delete, form:{ data: { turbo_confirm: "Are you sure?"} } %></td>
          </tr>
