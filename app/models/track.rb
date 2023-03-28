@@ -8,7 +8,7 @@ class Track < ApplicationRecord
      starttime = doc.xpath('//xmlns:time')
      
      if(starttime != nil && starttime.length > 0)
-        return starttime[0].text
+        return Time.xmlschema(starttime[0].text)
      else 
         return ""
      end   
