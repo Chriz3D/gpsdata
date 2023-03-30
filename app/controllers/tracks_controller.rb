@@ -9,9 +9,12 @@ class TracksController < ApplicationController
    
    def create
       @track = Track.new(track_params)
-      
-      if @track.save
+      @track.starttime = @track.parseGpx()
+     
+     if @track.save
          redirect_to tracks_path, notice: "Successfully uploaded."
+         
+       
       else
          render "new"
       end

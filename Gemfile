@@ -29,7 +29,7 @@ gem "jbuilder"
 
 gem 'carrierwave'
 gem 'bootstrap-sass'
-
+gem 'nokogiri'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
